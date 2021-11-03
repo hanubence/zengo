@@ -1,0 +1,26 @@
+---
+import { getTermekek } from "../helpers/commerce.js";
+let termekek = await getTermekek();
+
+---
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Asvany ekszer</title>
+
+	<link rel="stylesheet" href="{Astro.resolve('../styles/global.css')}">
+</head>
+
+<body>
+	{termekek.map((item) => (
+		<div>
+			<li>{item.name}</li>
+			<img src={item.image.url} alt="">
+		</div>
+  	))}
+</body>
+
+</html>
