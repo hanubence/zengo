@@ -1,0 +1,17 @@
+---
+import Elerhetosegek from '../components/Elerhetosegek.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+<html>
+    <head>
+        <title>Szadakút Kft.</title>
+    </head>
+    <body>
+        <Navbar />
+        
+        <slot />
+
+        <Footer />
+    </body>
+</html>
